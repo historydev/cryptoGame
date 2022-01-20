@@ -32,7 +32,7 @@ export const gameConfig = {
 			],
 			machines: [],
 			buttonText: 'Go to land',
-			render: false
+			render: true
 		},
 		{
 			name: 'My land 3',
@@ -62,8 +62,8 @@ export const gameConfig = {
 			inventory: {},
 			buttonText: 'Harvest: 600',
 			removeButtonText: 'Remove',
-			land: 'My land',
-			render: true
+			render: true,
+			land: 'My land'
 		},
 		{
 			name: 'Crystal Seed 2',
@@ -78,24 +78,8 @@ export const gameConfig = {
 			inventory: {},
 			buttonText: 'Harvest: 600',
 			removeButtonText: 'Remove',
-			land: 'My land 3',
-			render: false
-		},
-		{
-			name: 'Crystal Seed 3',
-			desc: 'Small pot',
-			img: 'https://d7qtdni8y4s5w.cloudfront.net/a2761b66-86e3-4cfd-9c7d-e629305efb3e/img/financial/bee.png',
-			data: [
-				{
-					name: 'Harvest on',
-					value: '2021-12-17 23:57:08 UTC'
-				}
-			],
-			inventory: {},
-			buttonText: 'Harvest: 600',
-			removeButtonText: 'Remove',
-			land: 'My land',
-			render: true
+			render: false,
+			land: 'My land 2'
 		}
 	]
 }
