@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c30c9b8-ec32-46de-ae26-ddedd04830d4" name="Default Changelist" comment="Fixed slots">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cryptoGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/game.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/js/game.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/gamePreview.class.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/js/gamePreview.class.mjs" afterDir="false" />

@@ -7,4 +7,4 @@ import {gameConfig} from "./game.config.mjs";
 
 const game = new PreviewGame(gameConfig.general);
 gameConfig.lands.forEach(el => game.addLand(el));
-gameConfig.machines.forEach(el => console.log(game.addMachine(el)));
+gameConfig.machines.forEach(el => game.addMachine(el));

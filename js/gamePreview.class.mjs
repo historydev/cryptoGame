@@ -12,6 +12,10 @@ export class PreviewGame {
 				item: this.lands,
 				output: 'lands'
 			}
+			if(type === 'machine') return {
+				item: this.machines,
+				output: 'machines'
+			}
 		}
 		this.sortRenderElems = (items, output) => {
 
@@ -47,6 +51,7 @@ export class PreviewGame {
 					div.innerHTML = el.html;
 					div.dataset.id = `${el.name} - ${el.id}`;
 					div.dataset.name = el.name;
+					div.onclick = () => el.onclick();
 
 					this.output.append(div);
 
@@ -124,7 +129,7 @@ export class PreviewGame {
 				updatedMachine.id = this.machines.findIndex(el => el === updatedMachine);
 
 				if(machine.render)  {
-					this.render(this.machines.filter(el => el === updatedMachine).map(el => el), 'machine', 'machines');
+					//this.render(this.machines.filter(el => el === updatedMachine).map(el => el), 'machine', 'machines');
 					return 'Machine has been added';
 				}
 
@@ -152,6 +157,8 @@ export class PreviewGame {
 			this.render(T.item.filter(el => el.name === itemName), type, T.output);
 		}
 
+		console.log(itemName);
+
 		this.contentElement.querySelector(`.addBox[data-name="${itemName}"]`).remove();
 
 
@@ -170,15 +177,22 @@ export class PreviewGame {
 		T.item[this.itemIndex].slot = {
 			id: this.itemIndex,
 			name: itemName,
-			html: `<div>+</div>`
+			html: `<div>+</div>`,
+			onclick: () => this.slotHandler(itemName, type)
 		};
 
 		T.item[this.itemIndex].slot.className = `box addBox`;
 
 		this.render(T.item.filter(el => el.name === itemName).map(el => el.slot), type, T.output);
-		document.querySelector(`.lands .addBox[data-name="${itemName}"]`).onclick = () => this.slotHandler(itemName, type);
 
 		return 'Slots added';
+	}
+
+	landHandler(itemName) {
+		document.querySelector('.machines').innerHTML = '';
+		console.log(this.machines.filter(el => el.land === itemName && el.render), this.machines.filter(el => el.land === itemName && !el.render));
+		this.render(this.machines.filter(el => el.land === itemName && el.render), 'machine', 'machines');
+		this.render(this.machines.filter(el => el.land === itemName && !el.render).map(el => el.slot), 'machine', 'machines');
 	}
 
 	addLand(land) {
@@ -207,9 +221,10 @@ export class PreviewGame {
 						`)}
 					</div>
 					<div class="buttons">
-						<button>${land.buttonText}</button>
+						<button class="openLand">${land.buttonText}</button>
 					</div>`,
-				className: 'box'
+				className: 'box',
+				onclick: () => this.landHandler(land.name)
 			}
 
 			this.landIndex = this.lands.findIndex(el => el.name === updatedLand.name);

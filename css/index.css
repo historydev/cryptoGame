@@ -230,7 +230,7 @@ main .content {
 }
 
 main .content > .item {
-    display: none;
+    /*display: none;*/
 }
 
 main .content > .active {

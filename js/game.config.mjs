@@ -61,7 +61,25 @@ export const gameConfig = {
 			buttonText: 'Harvest: 600',
 			removeButtonText: 'Remove',
 			render: true,
-			land: 'My land 1'
+			land: 'My land 2'
+		},
+		{
+			name: 'Crystal Seed 2',
+			title: 'Small pot',
+			img: 'https://d7qtdni8y4s5w.cloudfront.net/a2761b66-86e3-4cfd-9c7d-e629305efb3e/img/lands/free/common.png',
+			profit: 140,
+			time: 48,
+			data: [
+				{
+					name: 'Harvest on',
+					value: '2021-12-17 23:57:08 UTC'
+				}
+			],
+			inventory: {},
+			buttonText: 'Harvest: 600',
+			removeButtonText: 'Remove',
+			render: false,
+			land: 'My land 3'
 		}
 	]
 }
