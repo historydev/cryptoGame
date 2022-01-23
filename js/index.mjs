@@ -6,6 +6,5 @@ import {gameConfig} from "./game.config.mjs";
 
 
 const game = new PreviewGame(gameConfig.general);
-gameConfig.lands.forEach(el => game.addLand(el, el.render));
-gameConfig.machines.map(el => game.addMachine(el, el.land));
-//game.addSlot('Slot 2', 'My land 2', 'machine');
+gameConfig.lands.forEach(el => game.addLand(el));
+gameConfig.machines.forEach(el => console.log(game.addMachine(el)));

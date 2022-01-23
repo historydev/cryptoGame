@@ -185,7 +185,7 @@ main {
 }
 
 .inventory .item .value {
-    background: rgba(30, 30, 30);
+    background: rgb(30, 30, 30);
     margin-left: 10px;
 }
 
